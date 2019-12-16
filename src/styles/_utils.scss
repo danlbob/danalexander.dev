@@ -1,0 +1,30 @@
+@mixin fancy-border {
+  border-radius: 30px;
+  box-shadow: 0 0 0 10px $brand-brown, 0 0 0 20px $brand-orange,
+    0 0 0 30px $brand-light-orange;
+  margin: 30px;
+}
+
+@mixin btn($fg: white, $bg: black) {
+  @include button-text;
+  background: $bg;
+  color: $fg;
+  padding: 10px 50px;
+  border-radius: 10px;
+
+  &:hover {
+    background: rgba($bg, 0.8);
+  }
+}
+
+@mixin btn-primary {
+  @include btn($white, $black);
+}
+
+@mixin btn-action {
+  @include btn($white, $brand-orange);
+}
+
+@mixin btn-accent {
+  @include btn($white, $brand-blue);
+}

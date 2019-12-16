@@ -1,0 +1,28 @@
+@import './theme';
+
+.header {
+  @include fancy-border;
+  padding: 30px;
+
+  max-width: 750px;
+}
+
+.jumbo-title {
+  margin: 0 0 20px;
+}
+
+.jumbo-title__link {
+  @include heading;
+}
+
+.jumbo-title__first {
+  color: $brand-orange;
+}
+
+.jumbo-title__last {
+  color: $brand-brown;
+}
+
+.jumbo-title__end {
+  color: $brand-blue;
+}

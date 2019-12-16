@@ -1,0 +1,68 @@
+$f-sans-serif: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+  Helvetica, Arial, 'Lucida Grande', sans-serif;
+$f-copy: join('Lato', $f-sans-serif);
+$f-title: 'Shrikhand', cursive;
+
+$base-font: 14px;
+
+$f-xxxl: 128px;
+$f-xxl: 115px;
+$f-xl: 50px;
+$f-l: 29px;
+$f-m: $base-font;
+$f-s: 12px;
+$f-xs: 10px;
+$f-xxs: 9px;
+
+$f-normal: 400;
+$f-medium: 500;
+$f-bold: 600;
+
+// Letter Spacing
+$ls-l: 0.06em;
+$ls-m: 0.04em;
+
+@mixin body-font {
+  font-family: $f-copy;
+  font-weight: normal;
+}
+
+@mixin body-bold-font {
+  font-family: $f-copy;
+  font-weight: bold;
+}
+
+@mixin title-font {
+  font-family: $f-title;
+  font-weight: normal;
+  font-variant-ligatures: no-common-ligatures;
+  text-transform: uppercase;
+}
+
+@mixin heading {
+  @include title-font;
+  font-size: $f-xl;
+}
+
+// Body copy
+@mixin brand-body {
+  @include body-font;
+  font-size: $base-font;
+}
+
+// Button text
+@mixin button-text {
+  @include title-font;
+  font-size: $f-m;
+}
+
+@function rem($pixels) {
+  // @return $pixels * 1px;
+  @return ($pixels / $base-font) * 1rem;
+}
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

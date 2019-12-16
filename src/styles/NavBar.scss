@@ -1,0 +1,17 @@
+@import './theme.scss';
+
+.main-nav__item {
+  margin-right: 20px;
+}
+
+.main-nav__item--work {
+  @include btn-primary;
+}
+
+.main-nav__item--about {
+  @include btn-action;
+}
+
+.main-nav__item--contact {
+  @include btn-accent;
+}
